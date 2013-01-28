@@ -20,6 +20,22 @@
     <div class="field"><%= f.email_field :email %></div>
   </div>
 
+  <div class="field-wrapper">
+    <%= f.label :password %>
+    <div class="field"><%= f.password_field :password %></div>
+  </div>
+
+  <div class="field-wrapper">
+    <%= f.label :password_confirmation %>
+    <div class="field"><%= f.password_field :password_confirmation %></div>
+  </div>
+
+  <h3><%= t('.notify_me_when_my_stories_are') %>:</h3>
+  <div class="field">
+    <%= f.check_box :email_delivery %>
+    <%= f.label :email_delivery, t('delivered') %>
+  </div>
+
   <div class="actions"><%= f.submit t('sign up') %></div>
 <% end %>
 

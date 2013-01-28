@@ -1,8 +1,12 @@
 config/database.yml
 config/fulcrum.rb
+config/application.yml
+config/deploy.rb
+config/
 .bundle
 db/*.sqlite3
 log/*.log
 tmp/
 .rvmrc
 .sass-cache/
+Capfile

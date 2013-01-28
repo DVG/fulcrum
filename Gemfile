@@ -23,6 +23,8 @@ gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 
 group :production do
   gem 'pg'
+  gem 'execjs'
+  gem 'therubyracer'
 end
 
 group :development, :test do
@@ -34,3 +36,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
 end
+
+gem 'unicorn'
+gem 'capistrano'
+gem 'figaro'
