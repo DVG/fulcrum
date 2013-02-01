@@ -35,4 +35,9 @@ FactoryGirl.define do
     n.association :user
   end
 
+  factory :task do
+    task "MyTask"
+    completed false
+  end
+
 end

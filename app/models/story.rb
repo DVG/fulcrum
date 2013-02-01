@@ -26,6 +26,7 @@ class Story < ActiveRecord::Base
   validates :owned_by_id, :belongs_to_project => true
 
   has_many :changesets
+  has_many :tasks
   has_many :notes do
 
     # Creates a collection of rows on this story from a CSV::Row instance

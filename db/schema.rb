@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120504152649) do
+ActiveRecord::Schema.define(:version => 20130201143729) do
 
   create_table "changesets", :force => true do |t|
     t.integer  "story_id"
@@ -58,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20120504152649) do
     t.datetime "updated_at",                               :null => false
     t.decimal  "position"
     t.string   "labels"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "task"
+    t.boolean  "completed"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "story_id"
   end
 
   create_table "users", :force => true do |t|
