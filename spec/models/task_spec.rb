@@ -13,4 +13,15 @@ describe Task do
   describe "relationships" do
     it { subject.story.should eq story }
   end
+
+  describe "complete" do
+    before { subject.complete }
+    it { subject.completed.should be_true }
+  end
+
+  describe "uncomplete" do
+    subject { Factory.build :task, :story => story, :completed => true }
+    before {subject.uncomplete}
+    it { subject.completed.should be_false }
+  end
 end

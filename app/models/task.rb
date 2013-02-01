@@ -4,4 +4,12 @@ class Task < ActiveRecord::Base
   belongs_to :story
 
   validates :task, :presence => true
+
+  def complete
+    self.update_attribute(:completed, true)
+  end
+
+  def uncomplete
+    self.update_attribute(:completed, false)
+  end
 end
