@@ -26,7 +26,7 @@ gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 group :production do
   gem 'pg'
   gem 'execjs'
-  gem 'therubyracer'
+  #gem 'therubyracer'
 end
 
 group :development, :test do
