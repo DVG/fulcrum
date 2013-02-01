@@ -2,20 +2,19 @@ if (typeof Fulcrum == 'undefined') {
   Fulcrum = {};
 }
 
-Fulcrum.TaskView = Backbone.View.extend({
+class Fulcrum.Views.Task extends Backbone.View
   template: JST['templates/task']
   tagName: 'div'
   className: 'task'
 
-  events: {
-    "click a.delete-note": "deleteNote"
-  },
+  events:
+    "click a.check-task": "toggleTask"
 
   render: -> 
-    this.$el.html(this.template({note: this.model}))
-    return this
+    this.$el.html(this.template({task: this.model}))
+    this
 
-  deleteNote: -> 
+  toggleTask: -> 
     this.model.destroy()
     this.$el.remove()
-    return false
+    false
