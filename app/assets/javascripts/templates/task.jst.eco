@@ -1,0 +1,4 @@
+<div class="task">
+  <span class="created_at"><%= note.get("created_at") %></span> -
+  <a href="#" title="<%= I18n.t('complete') %>" class="complete-task"><%= I18n.t('complete') %></a>
+</div>
