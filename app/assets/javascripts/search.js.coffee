@@ -10,4 +10,5 @@ $ ->
     search_term = $('#search').val()
     if search_term == ''
       showAllTags()
-    showHideTags(search_term)
+    else
+      showHideTags(search_term)
