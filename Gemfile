@@ -11,7 +11,6 @@ group :assets do
   gem 'uglifier'
   gem 'compass-rails'
   gem 'ejs'
-  gem 'eco'
 end
 
 gem 'jquery-rails'
