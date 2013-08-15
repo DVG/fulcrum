@@ -1,6 +1,6 @@
 showHideTags = (tag) ->
-  $("div.story:contains(#{tag})").show()
-  $("div.story:not(:contains(#{tag}))").hide()
+  $("div.story:ci_contains(#{tag})").show()
+  $("div.story:not(:ci_contains(#{tag}))").hide()
 
 showAllTags = ->
   $("div.story").show()
